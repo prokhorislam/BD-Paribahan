@@ -21,3 +21,30 @@
     border: 1px solid rgba(29, 209, 0, 0.40);
     border-radius: 12px;
 }
+ /* header section */
+ .header {
+    background-image: url(./images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    border-radius: 40px;
+}
+.text-border {
+
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Drop shadow */
+}
+
+.stats-shadow {
+  border-radius: 20px; /* Optional: Rounded corners */
+  box-shadow: 0 5px 5px -3px #00FF00; /* Green glow */
+  margin-bottom: 60px;
+}
+.stats {
+    position: relative;
+    top : -50px;
+}
+.coupon {
+    width: 560px;
+    height: 210px;
+}
