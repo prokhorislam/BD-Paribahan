@@ -1,0 +1,19 @@
+/* universal rules */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* adding font classes */
+/* inter */
+
+.inter {
+  font-family: "Inter", serif;
+}
+
+/* raleway */
+
+.raleway {
+  font-family: "Raleway", serif;
+}
