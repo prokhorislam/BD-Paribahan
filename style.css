@@ -17,3 +17,7 @@
 .raleway {
   font-family: "Raleway", serif;
 }
+.nav-btn-border {
+    border: 1px solid rgba(29, 209, 0, 0.40);
+    border-radius: 12px;
+}
