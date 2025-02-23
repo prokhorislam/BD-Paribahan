@@ -149,9 +149,48 @@
         <section class="ticket-section bg-[#F7F8F8] mt-24 lg:mt-28">
             <p class="raleway text-3xl lg:text-4xl font-bold text-[#030712] text-center mt-28">P.H Paribahan</p>
             <h4 class="text-center inter text-base lg:text-lg font-normal text-[#03071299] mt-6">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</h4>
-            <!-- ticket form (select bus and destination)-->
-            <div>
+            <!-- ticket form card (select bus and destination)-->
+            <div class="bg-white flex w-11/12 mx-auto rounded-3xl mt-12
+            ">
+                <!-- bus + route selection -->
+                <div class="m-8 flex-1">
+                    <!-- bus selection (interface)-->
+                     <div class="flex justify-between  flex-col lg:flex-row">
+                        <div class="flex">
+                            <img class="w-16 h-12" src="images/bus-logo.png" alt="">
+                        <div class="ml-3">
+                            <p class="raleway text-3xl font-bold text-[#030712]">Greenline Paribahan</p>
+                            <p class="inter text-lg mb-6 font-normal text-[#03071299]">Coach-009-WEB ! AC_Business</p>
+                        </div>
+                        </div>
+                            <button class="btn bg-[#1DD1001A] text-[#1DD100] w-auto  font-medium text-lg inter">
+                                <img src="images/seat-green.png" alt="">
+                                40 Seats left
+                              </button>
+                     </div>
+                    <!-- route selection (interface)-->
+                     <div class="bg-[#F7F8F8] rounded-2xl mt-6 p-8">
+                        <div class="flex justify-between">
+                            <span class="raleway text-lg font-semibold text-[#03071299]">Route</span><span class="raleway text-lg font-semibold text-[#030712]">Dhaka - Sylhet</span>
+                        </div>
+                        <hr class="bg-[#03071233] border-dotted my-6">
+                        <div class="flex justify-between">
+                            <span class="raleway text-lg font-semibold text-[#03071299]">Departure Time</span><span class="raleway text-lg font-semibold text-[#030712]">9:00 PM</span>
+                        </div>
+                        <hr class="bg-[#03071233] border-dotted my-6">
+                        <span class="p-4 bg-[#0307120D] rounded-xl inter text-base font-medium text-[#030712CC] mr-6">Boarding Point - Laxmipur</span><span class="p-4 bg-[#0307120D] rounded-xl inter text-base font-medium text-[#030712CC] mr-6">Dropping Point - Bogura</span><span class="p-4 bg-[#0307120D] rounded-xl inter text-base font-medium text-[#030712CC]">Est. Time - 11 Hour</span>
+                     </div>
+                </div>
+                <!-- total amount -->
                 
+                <div class="flex">
+                    <img class="h-" src="images/info-devider.png" alt="">
+                    <div class="flex flex-col justify-center items-center mx-14">
+                        <span class="mx-auto"><img src="images/fare.png" alt=""></span>
+                    <p class="text-center raleway text-3xl font-bold text-[#030712]">550 Taka</p>
+                    <p class="text-center raleway text-2xl font-semibold text-[#03071299]">Per Seat</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
