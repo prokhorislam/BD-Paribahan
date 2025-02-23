@@ -48,3 +48,13 @@
     width: 560px;
     height: 210px;
 }
+
+/* ticket section */
+
+.ticket-section {
+  border-top-color: #00FF00;
+  border-top-width: 4px;
+  border-top-left-radius: 99px;
+  border-top-right-radius: 99px;
+  margin-bottom: 70px;
+}
