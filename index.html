@@ -144,7 +144,7 @@
             </div> 
           </section>
     </header>
-    <main>
+    <main class="bg-[#F7F8F8]">
         <!-- ticket section -->
         <section class="ticket-section bg-[#F7F8F8] mt-24 lg:mt-28">
             <p class="raleway text-3xl lg:text-4xl font-bold text-[#030712] text-center mt-28">P.H Paribahan</p>
@@ -197,11 +197,11 @@
             </div>
         </section>
         <!-- seat section -->
-         <section class="w-11/12 mx-auto">
+         <section class="w-11/12 mx-auto lg:flex grid bg-white mb-28">
             <!-- select seat interface box -->
-            <div>
+            <div class="lg:border-r-2 border-r-0 decoration-dotted flex-1">
                 <!-- available seats -->
-                 <div>
+                 <div class="p-8">
                     <p class="raleway text-2xl font-semibold text-[#030712]">Select Your Seat</p>
                     <hr class="my-6 bg-[#03071233] border-dotted">
                     <div class="flex justify-between my-5">
@@ -293,11 +293,85 @@
                  </div>
             </div>
             <!-- select seat payment form -->
-            <div></div>
+            <div class="lg:w-4/12 md:w-full">
+                <!-- payment box -->
+                    <!-- payment box text -->
+                <div class="m-8">
+                    <p class="raleway text-2xl font-semibold text-[#030712]">Payment Form</p>
+                    <hr class="my-6 bg-[#03071233] border-dotted">
+                    <!-- payment box card -->
+                    <div class="p-8 bg-[#F7F8F8]">
+                        <!-- seat panning -->
+                        <div class="flex justify-between">
+                            <div class="flex"><p class="inter text-base font-medium text-[#030712]">Seat</p><p class="h-5 w-7 rounded-xl bg-[#1DD100] text-center inter text-xs font-bold text-white flex justify-center items-center">0</p></div><p class="inter text-base font-medium text-[#030712]">Class</p><p class="inter text-base font-medium text-[#030712]">Price</p>
+                        </div>
+                        <hr class="my-6 bg-[#03071233] border-dotted">
+                        <div class="flex justify-between">
+                            <p class="inter text-base font-normal text-[#03071299]">C2</p>
+                            <p class="inter text-base font-normal text-[#03071299]">Economy</p>
+                            <p class="inter text-base font-normal text-[#03071299]">550</p>
+                        </div>
+                        <hr class="my-4 bg-[#03071233]">
+                        <!-- total -->
+                        <div class="flex justify-between">
+                            <p class="inter text-base font-medium text-[#030712]">Total Price :</p>
+                            <p class="inter text-base font-medium text-[#030712]">BDT<span class="ml-2">0</span></p>
+                        </div>
+                        <!-- coupon -->
+                         <div class="flex bg-white mt-4 mb-6">
+                            <input type="text" class="w-full flex-1 p-4 rounded-md inter text-sm font-medium text-[#030712] focus:outline-none" placeholder="Have any coupon?">
+                            <button class="btn btn-md bg-[#1DD100] md:w-20 inter text-base font-semibold text-[white] flex justify-center items-center">Apply</button>
+                         </div>
+                         <!-- price -->
+                          <div class="flex justify-between">
+                            <p class="inter text-base font-medium text-[#030712]">Grand Total</p>
+                            <p class="inter text-base font-medium text-[#030712]">BDT 1100</p>
+                          </div>
+                    </div>
+                </div>
+                <!-- payment form submit -->
+                 <div class="mx-8">
+                    <div class="lg:mb-6 mb-8">
+                    <p class="inter mb-2 text-base font-semibold text-[#030712]">Passenger Name*</p>
+                    <input type="text" class="w-full border-2 border-[#0307121A] p-4 rounded-md inter max-w-96 text-sm font-medium text-[#030712] focus:outline-none" placeholder="Enter your name">
+                    </div>
+                    <div class="lg:mb-6 mb-8">
+                    <p class="inter mb-2 text-base font-semibold text-[#030712]">Phone Number*</p>
+                    <input type="text" class="w-full border-2 border-[#0307121A] p-4 rounded-md inter max-w-96 text-sm font-medium text-[#030712] focus:outline-none" placeholder="Enter your name">
+                    </div>
+                    <div class="lg:mb-6 mb-8">
+                    <p class="inter mb-2 text-base font-semibold text-[#030712]">Email ID</p>
+                    <input type="text" class="w-full border-2 border-[#0307121A] p-4 rounded-md inter max-w-96 text-sm font-medium text-[#030712] focus:outline-none" placeholder="Enter your name">
+                    </div>
+                    <button class="btn max-w-96 bg-[#1DD100] text-white hover:text-black w-full raleway text-xl font-extrabold">Submit</button>
+                    <p class="underline inter text-base text-[#03071299] font-normal mb-2 mt-6"><a href="">Terms and Conditions</a></p>
+                    <p class="underline inter text-base text-[#03071299] font-normal"><a href="">Cancellation Policy</a></p>
+                 </div>
+            </div>
          </section>
     </main>
-    <footer>
-
+    <footer class="bg-[#030712]">
+        <div class="w-11/12 mx-auto">
+            <div class="pt-32">
+                <div class="flex justify-between">
+                    <p class="railway text-4xl font-extrabold text-white mb-4">P-Ticket</p>
+                    <p class="raleway font-semibold text-xl text-white">Download our app !</p>
+                </div>
+                <div class="flex justify-between bg">
+                    <p class="inter text-lg font-normal text-[#FFFFFFCC]">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                    <img src="images/playstore.svg" alt="">
+                </div>
+            </div>
+            <hr class="bg-[#FFFFFF4D] border-dotted mt-12 mb-8">
+            <div class="flex justify-between">
+                <p class="inter text-base font-normal text-[#FFFFFFB2]">@all rights reserved, BD-Paribahan services limited.2024</p>
+                <div class="flex gap-8 mb-28">
+                    <p class="inter text-base font-medium text-white"><a href="">Terms & condition</a></p>
+                    <p class="inter text-base font-medium text-white"><a href="">Return & refund policy</a></p>
+                    <p class="inter text-base font-medium text-white"><a href="">Privacy policy</a></p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
