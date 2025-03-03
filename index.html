@@ -165,7 +165,7 @@
                         </div>
                             <button class="btn bg-[#1DD1001A] text-[#1DD100] w-auto  font-medium text-lg inter">
                                 <img src="images/seat-green.png" alt="">
-                                40 Seats left
+                                <span id="total-seats">40</span> Seats left
                               </button>
                      </div>
                     <!-- route selection (interface)-->
@@ -224,71 +224,71 @@
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">A</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">A1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">A2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">A3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">A4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">A</p><div class="flex gap-8"><button onclick="totalSeat(A1)" id="A1" class="btn btn-lg md:w-28 seat inter text-lg font-medium text-[#03071280]">A1</button><button class="btn seat btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">A2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium seat text-[#03071280]">A3</button><button class="btn btn-lg md:w-28 seat inter text-lg font-medium text-[#03071280]">A4</button></div>
                     </div>
                     <!-- B row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">B</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">B1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">B2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">B3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">B4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">B</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">B1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">B2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">B3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">B4</button></div>
                     </div>
                     <!-- C row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">C</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">C1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">C2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">C3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">C4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">C</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">C1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">C2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">C3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">C4</button></div>
                     </div>
                     <!-- D row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">D</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">D1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">D2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">D3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">D4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">D</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">D1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">D2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">D3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">D4</button></div>
                     </div>
                     <!-- E row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">E</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">E1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">E2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">E3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">E4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">E</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">E1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">E2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">E3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">E4</button></div>
                     </div>
                     <!-- F row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">F</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">F1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">F2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">F3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">F4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">F</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">F1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">F2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">F3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">F4</button></div>
                     </div>
                     <!-- G row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">G</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">G1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">G2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">G3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">G4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">G</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">G1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">G2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">G3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">G4</button></div>
                     </div>
                     <!-- H row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">H</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">H1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">H2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">H3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">H4</button></div>
+                                <p class="flex justify-center items-center w-3 inter text-lg font-medium text-[#03071280]">H</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">H1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">H2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">H3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">H4</button></div>
                     </div>
                     <!-- I row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center items-center inter text-lg font-medium w-3 text-[#03071280]">I</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">I1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">I2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">I3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">I4</button></div>
+                                <p class="flex justify-center items-center inter text-lg font-medium w-3 text-[#03071280]">I</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">I1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">I2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">I3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">I4</button></div>
                     </div>
                     <!-- J row seats -->
                     <div class="flex justify-between">
                         <!-- buttons -->
                             <div class="flex gap-6">
-                                <p class="flex justify-center w-3 items-center inter text-lg font-medium text-[#03071280]">J</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">J1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">J2</button></div></div>
-                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">J3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280]">J4</button></div>
+                                <p class="flex justify-center w-3 items-center inter text-lg font-medium text-[#03071280]">J</p><div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">J1</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">J2</button></div></div>
+                            <div class="flex gap-8"><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">J3</button><button class="btn btn-lg md:w-28 inter text-lg font-medium text-[#03071280] seat">J4</button></div>
                     </div>
                  </div>
             </div>
@@ -303,13 +303,10 @@
                     <div class="p-8 bg-[#F7F8F8]">
                         <!-- seat panning -->
                         <div class="flex justify-between">
-                            <div class="flex"><p class="inter text-base font-medium text-[#030712]">Seat</p><p class="h-5 w-7 rounded-xl bg-[#1DD100] text-center inter text-xs font-bold text-white flex justify-center items-center">0</p></div><p class="inter text-base font-medium text-[#030712]">Class</p><p class="inter text-base font-medium text-[#030712]">Price</p>
+                            <div class="flex"><p class="inter text-base font-medium text-[#030712]">Seat</p><p id="seat-num" class="h-5 w-7 rounded-xl bg-[#1DD100] text-center inter text-xs font-bold text-white flex justify-center items-center">0</p></div><p class="inter text-base font-medium text-[#030712]">Class</p><p class="inter text-base font-medium text-[#030712]">Price</p>
                         </div>
                         <hr class="my-6 bg-[#03071233] border-dotted">
-                        <div class="flex justify-between">
-                            <p class="inter text-base font-normal text-[#03071299]">C2</p>
-                            <p class="inter text-base font-normal text-[#03071299]">Economy</p>
-                            <p class="inter text-base font-normal text-[#03071299]">550</p>
+                        <div id="selected-seats" class="inter text-base font-normal text-[#03071299] grid gap-4">
                         </div>
                         <hr class="my-4 bg-[#03071233]">
                         <!-- total -->
@@ -318,12 +315,13 @@
                             <p class="inter text-base font-medium text-[#030712]">BDT<span class="ml-2">0</span></p>
                         </div>
                         <!-- coupon -->
-                         <div class="flex bg-white mt-4 mb-6">
-                            <input type="text" class="w-full flex-1 p-4 rounded-md inter text-sm font-medium text-[#030712] focus:outline-none" placeholder="Have any coupon?">
-                            <button class="btn btn-md bg-[#1DD100] md:w-20 inter text-base font-semibold text-[white] flex justify-center items-center">Apply</button>
+                        <p class="mt-5 inter text-base font-normal text-[#03071299]">Book 4 seats to add a coupon !</p>
+                         <div id="coupon" class="flex bg-white mt-4 mb-6">
+                            <input type="text" id="coupon-code" class="w-full flex-1 p-4 rounded-md inter text-sm font-medium text-[#030712] focus:outline-none" placeholder="Have any coupon?">
+                            <button onclick="addCoupon()" class="btn btn-md bg-[#1DD100] md:w-20 inter text-base font-semibold text-[white] flex justify-center items-center">Apply</button>
                          </div>
                          <!-- price -->
-                          <div class="flex justify-between">
+                          <div class="flex justify-between mt-4">
                             <p class="inter text-base font-medium text-[#030712]">Grand Total</p>
                             <p class="inter text-base font-medium text-[#030712]">BDT 1100</p>
                           </div>
@@ -337,11 +335,11 @@
                     </div>
                     <div class="lg:mb-6 mb-8">
                     <p class="inter mb-2 text-base font-semibold text-[#030712]">Phone Number*</p>
-                    <input type="text" class="w-full border-2 border-[#0307121A] p-4 rounded-md inter max-w-96 text-sm font-medium text-[#030712] focus:outline-none" placeholder="Enter your name">
+                    <input type="text" class="w-full border-2 border-[#0307121A] p-4 rounded-md inter max-w-96 text-sm font-medium text-[#030712] focus:outline-none" placeholder="Enter your number">
                     </div>
                     <div class="lg:mb-6 mb-8">
                     <p class="inter mb-2 text-base font-semibold text-[#030712]">Email ID</p>
-                    <input type="text" class="w-full border-2 border-[#0307121A] p-4 rounded-md inter max-w-96 text-sm font-medium text-[#030712] focus:outline-none" placeholder="Enter your name">
+                    <input type="email" class="w-full border-2 border-[#0307121A] p-4 rounded-md inter max-w-96 text-sm font-medium text-[#030712] focus:outline-none" placeholder="Enter your mail">
                     </div>
                     <button class="btn max-w-96 bg-[#1DD100] text-white hover:text-black w-full raleway text-xl font-extrabold">Submit</button>
                     <p class="underline inter text-base text-[#03071299] font-normal mb-2 mt-6"><a href="">Terms and Conditions</a></p>
@@ -349,16 +347,31 @@
                  </div>
             </div>
          </section>
+         <!-- confirm submit -->
+         <section class="bg-[#F2F1F1] w-full hidden">
+            <div class="w-8/12 mx-auto bg-white rounded-2xl p-14">
+                <div class="mx-auto">
+                    <img class="mx-auto" src="images/success.png" alt="">
+                    <p class="raleway text-2xl font-bold text-center text-[#27AE60] my-9">SUCCESS!</p>
+                </div>
+                <p class="raleway text-2xl font-medium text-[#4A4A4A] text-center">Thank you for Booking Our Bus Seats. <br>
+                    We are working hard to find the best service and deals for you.</p>
+                <p class="inter text-xl font-light text-[#4A4A4A] text-center my-5">Shortly you will find a confirmation in your email.</p>
+                <div class="flex justify-center">
+                    <button class="inter btn hover:text-black rounded-3xl w-60 text-xl font-semibold text-white bg-[#27AE60]">Continue</button>
+                </div>
+            </div>
+         </section>
     </main>
     <footer class="bg-[#030712]">
         <div class="w-11/12 mx-auto">
             <div class="pt-32">
                 <div class="flex justify-between">
-                    <p class="railway text-4xl font-extrabold text-white mb-4">P-Ticket</p>
+                    <p class="railway text-4xl font-extrabold text-white mb-4">BD-Paribahan</p>
                     <p class="raleway font-semibold text-xl text-white">Download our app !</p>
                 </div>
                 <div class="flex justify-between bg">
-                    <p class="inter text-lg font-normal text-[#FFFFFFCC]">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                    <p class="inter text-lg font-normal text-[#FFFFFFCC]">BD-Paribahan is a digital platform to make your <br> daily commuting better.</p>
                     <img src="images/playstore.svg" alt="">
                 </div>
             </div>
@@ -373,5 +386,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/utilities.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

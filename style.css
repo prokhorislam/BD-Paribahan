@@ -58,3 +58,7 @@
   border-top-right-radius: 99px;
   margin-bottom: 70px;
 }
+
+.bg-green {
+  background-color: #1DD100 !important;
+}
