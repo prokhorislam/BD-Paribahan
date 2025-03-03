@@ -3,11 +3,14 @@ const allBtns = document.getElementsByClassName("seat");
 let count = 0;
 const maxSelection = 4;
 let totalSeats = 40;
+let prise = 0;
 
 // Get UI elements
 const checkoutBtn = document.getElementById("coupon");
 const seatList = document.getElementById("selected-seats"); // The area where selected seats are shown
 const totalSeatsSpan = document.getElementById("total-seats");
+const totalPrise = document.getElementById("total-prise");
+const grandTotal = document.getElementById("grand-total");
 
 // Update total seats count on page load
 totalSeatsSpan.innerText = totalSeats;
@@ -21,6 +24,7 @@ for (const allBtn of allBtns) {
             allBtn.classList.remove("bg-green");
             count -= 1;
             totalSeats += 1;
+            prise -= 550;
 
             // Remove seat from list
             let seatElement = document.getElementById(`seat-${seatName}`);
@@ -35,6 +39,7 @@ for (const allBtn of allBtns) {
             allBtn.classList.add("bg-green");
             count += 1;
             totalSeats -= 1;
+            prise += 550;
 
             // Add seat to the list
             let newSeat = document.createElement("p");
@@ -48,30 +53,18 @@ for (const allBtn of allBtns) {
         // Update displayed counts
         document.getElementById("seat-num").innerText = count;
         totalSeatsSpan.innerText = totalSeats;
+        totalPrise.innerText = prise;
+        grandTotal.innerText = prise;
 
         // Show or hide checkout button
-        checkoutBtn.style.display = count === maxSelection ? "inline-flex" : "none";
+        // checkoutBtn.style.display = count === maxSelection ? "inline-flex" : "none";
+        if (count < maxSelection){
+          checkoutBtn.style.display = "none";
+        }
+        else{
+          checkoutBtn.style.display = "inline-flex"; // Show button
+        }
     });
 }
 
 
-// seat reccipt fumction
-function totalSeat(id) {
-  const reciptArea = document.getElementById("reccipt");
-
-  const seatSection = document.createElement("div")
-  seatSection.style.display = "flex";
-  seatSection.style.justifyContent = "space-between";
-  reciptArea.appendChild(seatSection);
-  const seatName = document.createElement("div");
-  seatName.innerText = "id"; // Corrected: Assign text to innerText
-  seatSection.appendChild(seatName);
-
-  const economy = document.createElement("div");
-  economy.innerText = "economy"; // Corrected: Assign text to innerText
-  seatSection.appendChild(economy);
-
-  const amount = document.createElement("div");
-  amount.innerText = "550"; // Corrected: Assign text to innerText
-  seatSection.appendChild(amount);
-}
