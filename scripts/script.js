@@ -60,9 +60,8 @@ formMail.addEventListener("input", validateForm);
 // submit button 
 
 function submitButton() {
-    const paymentInt = document.getElementById("payment-interface");
-    const submitCard = document.getElementById("submit-card");
-
+    let paymentInt = document.getElementById("payment-interface");
+    let submitCard = document.getElementById("submit-card");
     if (paymentInt && submitCard) {  // Ensure elements exist
         submitCard.style.display = "block";
         paymentInt.style.display = "none";
@@ -74,12 +73,27 @@ function submitButton() {
 
 // continue button
 
-const continueBtn = document.getElementById("continue");
+// const continueBtn = document.getElementById("continue");
 
-continueBtn.addEventListener("click", function() {
-    paymentInt.style.display = "flex";
-    submitCard.style.display = "none";
-    formName.value = "";
-    formNum.value = "";
-    formMail.value = "";
-})
+// continueBtn.addEventListener("click", function() {
+
+// })
+// document.addEventListener("DOMContentLoaded", function () {
+//     const continueBtn = document.getElementById("continue");
+//     continueBtn.addEventListener("click", function () {
+        
+//     });
+//   });
+
+// continue button function
+function continueFunc() {
+        const paymentInt = document.getElementById("payment-interface");
+        const submitCard = document.getElementById("submit-card");
+        console.log("click lagse");
+        
+        paymentInt.style.display = "flex";
+        submitCard.style.display = "none";
+        formName.value = "";
+        formNum.value = "";
+        formMail.value = "";
+}
