@@ -37,8 +37,13 @@ document.getElementById("submit").addEventListener("click", function (event) {
 
     if (numText.length >= 4 && emailPattern.test(mailText)) {
         submitButton(); // Proceed if valid
-    } else {
-        alert("Please fill in all the required fields!"); // Show alert only once on submit
+    } else if(numText.length < 4 && emailPattern.test(mailText)) {
+        alert("invalid phone number!"); 
+    } else if(numText.length >= 4 && !emailPattern.test(mailText)){
+        alert("invalid email address!"); 
+    }
+    else{
+        alert("Please fill in all the required fields!");
     }
 });
 
@@ -49,8 +54,6 @@ document.getElementById("submit").addEventListener("click", function (event) {
 function alertFunction() {
     alert("Please fill in all the required fields!");
 }
-
-// Event listeners for form submission
 
 // Event listeners for real-time validation
 formNum.addEventListener("input", validateForm);
@@ -69,21 +72,6 @@ function submitButton() {
         console.error("Elements not found: Check 'payment-interface' or 'submitCard' IDs");
     }
 }
-
-
-// continue button
-
-// const continueBtn = document.getElementById("continue");
-
-// continueBtn.addEventListener("click", function() {
-
-// })
-// document.addEventListener("DOMContentLoaded", function () {
-//     const continueBtn = document.getElementById("continue");
-//     continueBtn.addEventListener("click", function () {
-        
-//     });
-//   });
 
 // continue button function
 function continueFunc() {

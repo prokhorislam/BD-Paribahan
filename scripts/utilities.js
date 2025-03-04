@@ -57,7 +57,6 @@ for (const allBtn of allBtns) {
         grandTotal.innerText = prise;
 
         // Show or hide checkout button
-        // checkoutBtn.style.display = count === maxSelection ? "inline-flex" : "none";
         if (count < maxSelection){
           checkoutBtn.style.display = "none";
         }
