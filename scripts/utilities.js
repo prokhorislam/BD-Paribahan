@@ -67,3 +67,20 @@ for (const allBtn of allBtns) {
 }
 
 
+// smooth scroll
+
+
+    // scroll to payment interface
+function scrollToSection() {
+    document.getElementById("payment-interface").scrollIntoView({ behavior: "smooth" });
+}
+
+    // scroll to bus tickets
+function scrollToBus() {
+    document.getElementById("bus-tickets").scrollIntoView({ behavior: "smooth" });
+}
+
+    // continue button scroll
+function jumpToHeader() {
+    
+}

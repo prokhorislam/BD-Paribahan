@@ -16,7 +16,7 @@
     <title>BD-Paribahan</title>
 </head>
 <body class="">
-    <header class="w-11/12 mx-auto">
+    <header id="header" class="w-11/12 mx-auto">
         <!-- navigation bar -->
         <nav class="raleway justify-center items-center">
             <div class="navbar bg-base-100 flex justify-between">
@@ -62,7 +62,7 @@
                 <!-- nav button -->
                 <div class="navbar-end">
                     <span class="nav-btn-border">
-                        <button class="btn bg-[#1DD1001A] text-[#1DD100] w-32 h-auto font-bold text-xl">
+                        <button onclick="scrollToBus()" class="btn bg-[#1DD1001A] text-[#1DD100] w-32 h-auto font-bold text-xl">
                             Bus
                             <img src="images/bus-icon.png" alt="">
                           </button>
@@ -76,7 +76,7 @@
              <div class="header mt-8">
                 <h2 class="lg:text-6xl md:text-5xl text-4xl raleway font-extrabold text-white text-center pt-20">End-to-End Travel with</h2><br><span><p class="text-[#1DD100] py-1 text-border lg:text-6xl md:text-5xl text-4xl raleway font-extrabold text-center">BD-Paribahan</p></span>
                 <p class="inter text-white text-center lg:text-lg md:text-base text-sm pt-10">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
-                <button class="rounded-xl hover:bg-[#1DD100BA] hover:text-white border-2 border-[#1DD100] bg-[#1DD100] raleway lg:text-xl md:text-lg text-base font-bold text-[#030712] py-4 px-6 h-16 w-44 mt-6 mx-auto flex justify-center">Buy Tickets</button>
+                <button onclick="scrollToSection()" class="rounded-xl hover:bg-[#1DD100BA] hover:text-white border-2 border-[#1DD100] bg-[#1DD100] raleway lg:text-xl md:text-lg text-base font-bold text-[#030712] py-4 px-6 h-16 w-44 mt-6 mx-auto flex justify-center">Buy Tickets</button>
              </div>
             <!-- stats part -->
              <div class="stats inter justify-center items-center mx-auto gap-5 bg-transparent w-10/12 hidden md:flex">
@@ -146,7 +146,7 @@
     </header>
     <main class="bg-[#F7F8F8]">
         <!-- ticket section -->
-        <section class="ticket-section bg-[#F7F8F8] mt-24 lg:mt-28">
+        <section id="bus-tickets" class="ticket-section bg-[#F7F8F8] mt-24 lg:mt-28">
             <p class="raleway text-3xl lg:text-4xl font-bold text-[#030712] text-center mt-28">P.H Paribahan</p>
             <h4 class="text-center inter text-base lg:text-lg font-normal text-[#03071299] mt-6">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</h4>
             <!-- ticket form card (select bus and destination)-->
@@ -350,7 +350,7 @@
             </div>
          </section>
          <!-- confirm submit -->
-         <section id="submit-card" style="display: none;" class="bg-[#F2F1F1] w-full">
+         <section id="submit-card" style="display: none;" class="bg-[#F2F1F1] w-full h-auto py-16">
             <div class="w-8/12 mx-auto bg-white rounded-2xl p-14">
                 <div class="mx-auto">
                     <img class="mx-auto" src="images/success.png" alt="">

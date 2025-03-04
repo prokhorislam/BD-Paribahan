@@ -68,6 +68,7 @@ function submitButton() {
     if (paymentInt && submitCard) {  // Ensure elements exist
         submitCard.style.display = "block";
         paymentInt.style.display = "none";
+        location.href = "#submit-card";
     } else {
         console.error("Elements not found: Check 'payment-interface' or 'submitCard' IDs");
     }
@@ -84,4 +85,5 @@ function continueFunc() {
         formName.value = "";
         formNum.value = "";
         formMail.value = "";
+        location.href = "#header";
 }
