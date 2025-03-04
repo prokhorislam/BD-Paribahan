@@ -13,6 +13,9 @@ function addCoupon() {
         let coupon2 = prise - coupon2discount;
         grandTotal.innerText = coupon2;
     }
+    else {
+        alert("Invalid coupon code!");
+    }
 }
 
 // form submission
@@ -24,19 +27,30 @@ const formNum = document.getElementById("form-number");
 const formMail = document.getElementById("form-mail");
 
 // Function to validate input fields
-function validateForm() {
-    let numText = formNum.value.trim();
-    let mailText = formMail.value.trim();
+document.getElementById("submit").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevents form from submitting automatically
 
-    // Regular expression for basic email validation
+    let numText = document.getElementById("form-number").value.trim();
+    let mailText = document.getElementById("form-mail").value.trim();
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (numText.length >= 4 && emailPattern.test(mailText)) {
-        submit.style.display = "block";
+        submitButton(); // Proceed if valid
     } else {
-        submit.style.display = "none";
+        alert("Please fill in all the required fields!"); // Show alert only once on submit
     }
+});
+
+
+
+
+// alert function
+function alertFunction() {
+    alert("Please fill in all the required fields!");
 }
+
+// Event listeners for form submission
 
 // Event listeners for real-time validation
 formNum.addEventListener("input", validateForm);
@@ -45,14 +59,18 @@ formMail.addEventListener("input", validateForm);
 
 // submit button 
 
-const submitCard = document.getElementById("submit-card");
-const paymentInt = document.getElementById("payment-interface");
-submit.addEventListener("click", function() {
+function submitButton() {
     const paymentInt = document.getElementById("payment-interface");
-    submitCard.style.display = "block";
-    paymentInt.style.display = "none";
+    const submitCard = document.getElementById("submit-card");
 
-})
+    if (paymentInt && submitCard) {  // Ensure elements exist
+        submitCard.style.display = "block";
+        paymentInt.style.display = "none";
+    } else {
+        console.error("Elements not found: Check 'payment-interface' or 'submitCard' IDs");
+    }
+}
+
 
 // continue button
 
